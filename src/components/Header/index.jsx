@@ -2,6 +2,8 @@ import React from "react";
 import { AppBar, Toolbar, Button, Typography } from "@mui/material";
 import { createStyles, makeStyles } from "@mui/styles";
 import { ReactComponent as Logo } from "../../assets/vsr_logo_black.svg";
+import { Link } from "react-router-dom";
+
 const useStyles = makeStyles((theme) =>
   createStyles({
     root: {
@@ -43,7 +45,7 @@ const Header = () => {
 
   return (
     <div className={classes.root}>
-      <AppBar position="sticky" >
+      <AppBar position="sticky">
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
             <div className={classes.circleBackground}>
@@ -51,7 +53,9 @@ const Header = () => {
             </div>
           </Typography>
 
-          <Button color="inherit">Agenda</Button>
+          <Button color="inherit">
+            <Link to="/agenda">Agenda</Link>
+          </Button>
         </Toolbar>
       </AppBar>
     </div>
