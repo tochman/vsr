@@ -19,11 +19,11 @@
   "scripts": {
     "start": "react-app-rewired start",
     "start:silent": "BROWSER=none react-scripts start",
-    "build": "react-app-rewired build",
+    "build": "CI= react-app-rewired build",
     "cy:open": "cypress open",
     "cy:run": "cypress run",
     "cypress": "NODE_ENV=test start-server-and-test start:silent http://localhost:3000/ cy:open",
-    "cypress:ci": "NODE_ENV=test CI start-server-and-test start:silent http://localhost:3000/ cy:run"
+    "cypress:ci": "NODE_ENV=test start-server-and-test start:silent http://localhost:3000/ cy:run"
   },
   "eslintConfig": {
     "extends": [
