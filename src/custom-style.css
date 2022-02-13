@@ -19,3 +19,11 @@ path {
   stroke: #42526e;
   stroke-miterlimit: 10;
 }
+
+.MuiToolbar-root a:hover,
+a:visited,
+a:link,
+a:active {
+  color: #bbb;
+  text-decoration: none;
+}
