@@ -24,7 +24,7 @@ const InterestForm = () => {
       text: `Has submitted an interest form.\nUse ${contact.email} to get in touch.`,
     };
     const { data } = await axios.post(
-      "https://hooks.slack.com/services/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",
+      `https://hooks.slack.com/services/${process.env.REACT_APP_SLACK_TOKEN}`,
       payload
     );
     data === "ok" && setSent(true);
