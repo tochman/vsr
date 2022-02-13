@@ -4,8 +4,8 @@ describe("navigating to the acttivity view", () => {
     cy.intercept(
       "POST",
       "https://hooks.slack.com/services/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",
-      { body: "ok" }
-    );
+      { body: "ok", statusCode: 200 }
+    ).as("postSlack");
     cy.visit("/agenda");
   });
 
@@ -13,6 +13,12 @@ describe("navigating to the acttivity view", () => {
     cy.get("[data-cy=name-input]").type("Thomas");
     cy.get("[data-cy=email-input]").type("thomas@email.com");
     cy.get("[data-cy=send-button]").click();
+  });
+
+  it("is expected to make a POST request", () => {
+    cy.wait("@postSlack")
+      .its("request.method")
+      .should("eq", 'POST')
   });
 
   it("is expected to hide form", () => {
