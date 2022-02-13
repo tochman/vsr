@@ -2,6 +2,8 @@ import React from "react";
 import { AppBar, Toolbar, Button, Typography } from "@mui/material";
 import { createStyles, makeStyles } from "@mui/styles";
 import { ReactComponent as Logo } from "../../assets/vsr_logo_black.svg";
+import { Link } from "react-router-dom";
+
 const useStyles = makeStyles((theme) =>
   createStyles({
     root: {
@@ -12,7 +14,6 @@ const useStyles = makeStyles((theme) =>
     },
     title: {
       flexGrow: 1,
-      textAlign: "center",
     },
     logo: {
       maxWidth: 40,
@@ -21,8 +22,8 @@ const useStyles = makeStyles((theme) =>
     circleBackground: {
       position: "absolute",
       top: 5,
-      height: 106 + "px",
-      width: 106 + "px",
+      height: 107 + "px",
+      width: 107 + "px",
       backgroundColor: "#2e3b55",
       borderRadius: 50 + "%",
       display: "inline",
@@ -35,6 +36,7 @@ const useStyles = makeStyles((theme) =>
       strokeMiterlimit: 10,
       width: 100,
       marginTop: 3,
+      marginLeft: 3,
     },
   })
 );
@@ -43,15 +45,20 @@ const Header = () => {
 
   return (
     <div className={classes.root}>
-      <AppBar position="sticky" >
+      <AppBar position="sticky">
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            <div className={classes.circleBackground}>
-              <Logo className={classes.circle} />
-            </div>
+            <Link to="/">
+              <div className={classes.circleBackground}>
+                <Logo className={classes.circle} />
+              </div>
+            </Link>
           </Typography>
 
-          <Button color="inherit">Agenda</Button>
+          <Button
+            color="inherit"
+            component={() => <Link to="/agenda">Agenda</Link>}
+          />
         </Toolbar>
       </AppBar>
     </div>
