@@ -1,8 +1,19 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { CssBaseline, Typography, Container } from "@mui/material";
-import { ReactComponent as WorkshopLogo } from "../../assets/workshop_1.svg";
 import InterestForm from './InterestForm'
+import axios from 'axios'
+import AgendaEntry from './AgendaEntry'
+
 const Agenda = () => {
+  const [entries, setEntries] = useState([])
+  const fetchEntries = async () => {
+    const { data } = await axios.get(`./agenda.json`)
+    setEntries(data.entries)
+  }
+  useEffect(() => {
+    fetchEntries()
+  }, [])
+  
   return (
     <>
       <CssBaseline />
@@ -11,24 +22,10 @@ const Agenda = () => {
           Aktiviteter
         </Typography>
         <Typography variant="h3" component="h1" gutterBottom>
-          <WorkshopLogo />
+        <img src={process.env.PUBLIC_URL + '/assets/workshop_1.svg'} /> 
         </Typography>
-        <Typography variant="body1" gutterBottom>
-          Är du allmänt historieintresserad och vill lära dig att läsa och
-          förstå gamla böcker, tidskrifter och dokument? Den äldre svenskan kan
-          kännas främmande och svår. I tryckt form användes den svårlästa
-          typsnittet fraktur, och i de handskrivna dokumenten är skrivstilen som
-          hieroglyfer.
-        </Typography>
-        <Typography variant="body1" gutterBottom>
-          I “Läs och förstå 1700-talet” lär vi oss genom praktiska övningar att
-          läsa och förstå historiska dokument.
-        </Typography>
-        <Typography variant="body1" gutterBottom>
-          Vi träffas dagtid under 3 söndagar på Lerjedalens Café & Bistro
-          (Kroksjövägen, 424 56 Gunnilse) och tillbringar ca 2 timmar ihop.
-          Kaffe och smörgås ingår i priset som är 60 kr.
-        </Typography>
+        {entries.map(entry => (<AgendaEntry entry={entry} />))}
+        
         <InterestForm />
       </Container>
     </>
