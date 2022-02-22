@@ -5,7 +5,16 @@
       "description": "Är du allmänt historieintresserad och vill lära dig att läsa ochförstå gamla böcker, tidskrifter och dokument? Den äldre svenskan kan kännas främmande och svår. I tryckt form användes den svårlästa typsnittet fraktur, och i de handskrivna dokumenten är skrivstilen som hieroglyfer.",
       "format": "I “Läs och förstå 1700-talet” lär vi oss genom praktiska övningar att läsa och förstå historiska dokument.",
       "practical_info": "Vi träffas dagtid under 3 söndagar på Lerjedalens Café & Bistro (Kroksjövägen, 424 56 Gunnilse) och tillbringar ca 2 timmar ihop. Kaffe och smörgås ingår i priset som är 60 kr.",
-      "price": "60 kr"
+      "price": "60 kr",
+      "imagePath": "/assets/workshop_1.svg"
+    },
+    {
+      "title": "Vitterhetsbal",
+      "description": "Sällskapets största event och där vi umgås, underhålls och vidgar våra sinnen. Våren 2022 kommer vi att samlas och lära oss mer om opera och denna konstarts hisoria, utveckling och dess plats i det moderna kulturlivet.",
+      "format": "Föreläsningar varvade med liveuppträdanden, 3 rätters middag med fördrink och efterföljande mingel.",
+      "practical_info": "Datumet för detta event är inte satt ännu. Kontakta oss för mer information.",
+      "price": "1 250 kr",
+      "imagePath": "/assets/bal_2.svg"
     }
   ]
 }

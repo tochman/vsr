@@ -20,6 +20,12 @@ path {
   stroke-miterlimit: 10;
 }
 
+.contact-form-container {
+  margin-top: 40px;
+}
+
+
+
 .MuiToolbar-root a:hover,
 a:visited,
 a:link,

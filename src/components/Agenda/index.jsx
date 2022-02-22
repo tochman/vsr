@@ -21,12 +21,10 @@ const Agenda = () => {
         <Typography variant="h1" component="h1" gutterBottom>
           Aktiviteter
         </Typography>
-        <Typography variant="h3" component="h1" gutterBottom>
-        <img src={process.env.PUBLIC_URL + '/assets/workshop_1.svg'} /> 
-        </Typography>
+
         {entries.map(entry => (<AgendaEntry entry={entry} />))}
         
-        <InterestForm />
+        <InterestForm agenda={entries}/>
       </Container>
     </>
   );

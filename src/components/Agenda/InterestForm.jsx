@@ -1,10 +1,16 @@
 import React, { useState } from "react";
-import { TextField, Button, Typography } from "@mui/material";
+import {
+  TextField,
+  Button,
+  Typography,
+  Checkbox,
+  FormControlLabel,
+} from "@mui/material";
 import axios from "axios";
 
 import SendIcon from "@mui/icons-material/Send";
 
-const InterestForm = () => {
+const InterestForm = ({ agenda, strip = false }) => {
   const contactFields = { name: "", email: "" };
   const [contact, setContact] = useState(contactFields);
   const [sent, setSent] = useState(false);
@@ -30,14 +36,18 @@ const InterestForm = () => {
     data === "ok" && setSent(true);
   };
   return (
-    <>
-      <Typography variant="h3" component="h1" gutterBottom>
-        Intresserad att vara med?
-      </Typography>
-      <Typography variant="body1" gutterBottom>
-        Skicka dina uppgifter så kontaktar vi dig med mer detaljer.
-        Intresseanmälan är <strong>inte bindande</strong>.
-      </Typography>
+    <div className="contact-form-container">
+      {!strip && (
+        <>
+          <Typography variant="h3" component="h1" gutterBottom>
+            Intresserad att vara med?
+          </Typography>
+          <Typography variant="body1" gutterBottom>
+            Skicka dina uppgifter så kontaktar vi dig med mer detaljer.
+            Intresseanmälan är <strong>inte bindande</strong>.
+          </Typography>
+        </>
+      )}
       {sent ? (
         <div data-cy="thx-message">
           <Typography variant="body1" gutterBottom>
@@ -46,6 +56,22 @@ const InterestForm = () => {
         </div>
       ) : (
         <div data-cy="form-container">
+          {agenda && (
+            <div style={{ margin: 5 + "px" }}>
+              {agenda.map((entry) => (
+                <FormControlLabel control={<Checkbox />} label={entry.title} name={entry.title}/>
+              ))}
+            </div>
+          )}
+          <TextField
+            multiline
+            rows={2}
+            maxRows={4}
+            name="message"
+            placeholder="Eventuellt meddelande"
+            style={{ margin: 5 + "px", width: 100 + "%" }}
+            onBlur={handleFieldChange}
+          />
           <TextField
             size="small"
             label="Ditt namn"
@@ -74,7 +100,7 @@ const InterestForm = () => {
           </Button>
         </div>
       )}
-    </>
+    </div>
   );
 };
 
