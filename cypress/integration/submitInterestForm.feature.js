@@ -12,6 +12,8 @@ describe("navigating to the acttivity view", () => {
   before("and filling in both fields", () => {
     cy.get("[data-cy=name-input]").type("Thomas");
     cy.get("[data-cy=email-input]").type("thomas@email.com");
+    cy.get("[data-cy=check-1]").click()
+    cy.get("[data-cy=check-2]").click()
     cy.get("[data-cy=send-button]").click();
   });
 

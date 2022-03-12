@@ -1,6 +1,7 @@
 {
   "entries": [
     {
+      "id": "1",
       "title": "Läs och Förstå 1700-talet",
       "description": "Är du allmänt historieintresserad och vill lära dig att läsa ochförstå gamla böcker, tidskrifter och dokument? Den äldre svenskan kan kännas främmande och svår. I tryckt form användes den svårlästa typsnittet fraktur, och i de handskrivna dokumenten är skrivstilen som hieroglyfer.",
       "format": "I “Läs och förstå 1700-talet” lär vi oss genom praktiska övningar att läsa och förstå historiska dokument.",
@@ -9,6 +10,7 @@
       "imagePath": "/assets/workshop_1.svg"
     },
     {
+      "id": "2",
       "title": "Vitterhetsbal",
       "description": "Sällskapets största event och där vi umgås, underhålls och vidgar våra sinnen. Våren 2022 kommer vi att samlas och lära oss mer om opera och denna konstarts hisoria, utveckling och dess plats i det moderna kulturlivet.",
       "format": "Föreläsningar varvade med liveuppträdanden, 3 rätters middag med fördrink och efterföljande mingel.",
