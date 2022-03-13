@@ -38,13 +38,25 @@ const useStyles = makeStyles((theme) =>
       marginTop: 3,
       marginLeft: 3,
     },
+    menuItem: {
+      marginRight: 10 + "px",
+      opacity: 1,
+      transition: 0.1 + "s",
+      "&:last-child": {
+        marginRight: 0,
+      },
+      "&:hover": {
+        opacity: 0.7,
+        fontWeight: 'bold'
+      },
+    },
   })
 );
 const Header = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <div className={classes.root} data-cy="header">
       <AppBar position="sticky">
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
@@ -54,10 +66,22 @@ const Header = () => {
               </div>
             </Link>
           </Typography>
-
+          <Button
+            className={classes.menuItem}
+            color="inherit"
+            component={() => (
+              <Link className={classes.menuItem} to="/mission">
+                Mission
+              </Link>
+            )}
+          />
           <Button
             color="inherit"
-            component={() => <Link to="/agenda">Agenda</Link>}
+            component={() => (
+              <Link className={classes.menuItem} to="/agenda">
+                Agenda
+              </Link>
+            )}
           />
         </Toolbar>
       </AppBar>
