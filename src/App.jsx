@@ -6,6 +6,7 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import LandingPage from "./components/LandingPage";
 import Agenda from "./components/Agenda";
+import Mission from './components/Mission'
 import { Routes, Route } from "react-router-dom";
 const App = () => {
   return (
@@ -21,6 +22,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="agenda" element={<Agenda />} />
+          <Route path="mission" element={<Mission />} />
         </Routes>
 
         <Footer />

@@ -45,11 +45,18 @@ const InterestForm = ({ agenda, strip = false }) => {
       username: contact.name,
       text: text,
     };
-    const { data } = await axios.post(
-      `https://hooks.slack.com/services/${process.env.REACT_APP_SLACK_TOKEN}`,
-      payload
-    );
-    data === "ok" && setSent(true);
+
+    if (!process.env.NODE_ENV || process.env.NODE_ENV === "development") {
+      // dev code
+      setSent(true);
+    } else {
+      // production code
+      const { data } = await axios.post(
+        `https://hooks.slack.com/services/${process.env.REACT_APP_SLACK_TOKEN}`,
+        payload
+      );
+      data === "ok" && setSent(true);
+    }
   };
   return (
     <div className="contact-form-container">
@@ -74,20 +81,23 @@ const InterestForm = ({ agenda, strip = false }) => {
         <div data-cy="form-container">
           {agenda && (
             <div style={{ margin: 5 + "px" }}>
-              {agenda.map((entry) => (
-                <FormControlLabel
-                  control={
-                    <Checkbox
-                      data-cy={`check-${entry.id}`}
-                      inputProps={{ entry: JSON.stringify(entry) }}
+              {agenda.map(
+                (entry) =>
+                  entry.active && (
+                    <FormControlLabel
+                      control={
+                        <Checkbox
+                          data-cy={`check-${entry.id}`}
+                          inputProps={{ entry: JSON.stringify(entry) }}
+                        />
+                      }
+                      key={`check-${entry.id}`}
+                      label={entry.title}
+                      name={entry.title}
+                      onChange={handleCheckbox}
                     />
-                  }
-                  key={`check-${entry.id}`}
-                  label={entry.title}
-                  name={entry.title}
-                  onChange={handleCheckbox}
-                />
-              ))}
+                  )
+              )}
             </div>
           )}
           <TextField

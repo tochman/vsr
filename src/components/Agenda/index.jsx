@@ -22,7 +22,7 @@ const Agenda = () => {
           Aktiviteter
         </Typography>
 
-        {entries.map(entry => (<AgendaEntry entry={entry}  key={entry.id}/>))}
+        {entries.map(entry => ( entry.active && <AgendaEntry entry={entry}  key={entry.id}/>))}
         
         <InterestForm agenda={entries}/>
       </Container>

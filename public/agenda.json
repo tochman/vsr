@@ -7,7 +7,8 @@
       "format": "I “Läs och förstå 1700-talet” lär vi oss genom praktiska övningar att läsa och förstå historiska dokument.",
       "practical_info": "Vi träffas dagtid under 3 söndagar på Lerjedalens Café & Bistro (Kroksjövägen, 424 56 Gunnilse) och tillbringar ca 2 timmar ihop. Kaffe och smörgås ingår i priset som är 60 kr.",
       "price": "60 kr",
-      "imagePath": "/assets/workshop_1.svg"
+      "imagePath": "/assets/workshop_1.svg",
+      "active": true
     },
     {
       "id": "2",
@@ -16,7 +17,18 @@
       "format": "Föreläsningar varvade med liveuppträdanden, 3 rätters middag med fördrink och efterföljande mingel.",
       "practical_info": "Datumet för detta event är inte satt ännu. Kontakta oss för mer information.",
       "price": "1 250 kr",
-      "imagePath": "/assets/bal_2.svg"
+      "imagePath": "/assets/bal_2.svg",
+      "active": false
+    },
+    {
+      "id": "3",
+      "title": "Workshop - De 7 Klassikerna",
+      "description": "Det finns 7 kardinalsynder och tillika 7 heliga dygder. Enligt Diffords Guide, finns der även 7 klassiska cocktails. I denna workshop går vi igenom den listan och lär oss att blanda och presentera dessa cocktails.",
+      "format": "Vi träffas i baren på Lärjedalens Golfklubb och tillbringar ca 2 timmar ihop där vi under ledning av Thomas går igenom recepten från Diffords Guide. Du får testa på att blanda egna drinkar. Självklart ställer vi bilen hemma i och med att alla drinkarna skall provsmakas och bedömmas.",
+      "practical_info": "Vi träffas Torsdagen 9 Juni på Lärjedalens Golfklubb och tillbringar ca 2 timmar ihop.",
+      "price": "650 kr",
+      "imagePath": "/assets/magnificent_7_cocktails.jpeg",
+      "active": true
     }
   ]
 }

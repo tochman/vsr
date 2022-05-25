@@ -9,7 +9,7 @@ const AgendaEntry = ({ entry }) => {
           className="activity-image"
           alt={entry.title}
           src={process.env.PUBLIC_URL + entry.imagePath}
-          style={{marginBottom: 30}}
+          style={{marginBottom: 30, maxWidth: 500}}
         />
       )}
       <Typography variant="h3" gutterBottom>
@@ -24,6 +24,9 @@ const AgendaEntry = ({ entry }) => {
       <Typography variant="body1" gutterBottom>
         {entry.practical_info}{" "}
       </Typography>
+      { entry.price &&   <Typography variant="body1" gutterBottom>
+        Pris per person: {entry.price}{" "}
+      </Typography>}
     </div>
   );
 };

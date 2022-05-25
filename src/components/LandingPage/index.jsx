@@ -1,5 +1,5 @@
 import React from "react";
-import { CssBaseline,  Typography, Container } from "@mui/material";
+import { CssBaseline, Typography, Container } from "@mui/material";
 import { ReactComponent as FullLogo } from "../../assets/full_logo.svg";
 const LandingPage = () => {
   return (
@@ -38,7 +38,11 @@ const LandingPage = () => {
           utveckling och förädling.
         </Typography>
         <FullLogo />
-        <Typography variant="body1">Mer information kommer...</Typography>
+        <Typography variant="body1">
+          Vi strävar efter att erbjuda våra medlemmar en blandin g av
+          aktiviteter, workshops, och träffar i syfte att öka kunskapen inom en
+          blandning av områden.{" "}
+        </Typography>
       </Container>
     </>
   );
