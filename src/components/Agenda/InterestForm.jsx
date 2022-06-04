@@ -12,8 +12,8 @@ import SendIcon from "@mui/icons-material/Send";
 
 Array.prototype.toSentence = function (comma, and) {
   const b = this.pop();
-  return (b ? (this.length ? [this.join(comma || ", "), b] : [b]) : this).join(
-    and || " and "
+  return (b ? (this.length ? [this.join(`${comma} ` || ", "), b] : [b]) : this).join(
+    ` ${and} ` || " and "
   );
 };
 
