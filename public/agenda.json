@@ -23,12 +23,12 @@
     {
       "id": "3",
       "title": "Workshop - De 7 Klassikerna",
-      "description": "Det finns 7 kardinalsynder och tillika 7 heliga dygder. Enligt Diffords Guide, finns der även 7 klassiska cocktails. I denna workshop går vi igenom den listan och lär oss att blanda och presentera dessa cocktails.",
+      "description": "Det finns 7 kardinalsynder och tillika 7 heliga dygder. Enligt Diffords Guide, finns det även 7 klassiska cocktails. I denna workshop går vi igenom den listan och lär oss att blanda och presentera dessa cocktails.",
       "format": "Vi träffas i baren på Lerjedalens Golfklubb och tillbringar ca 2 timmar ihop där vi under ledning av Thomas går igenom recepten från Diffords Guide. Du får testa på att blanda egna drinkar. Självklart ställer vi bilen hemma i och med att alla drinkarna skall provsmakas och bedömas.",
       "practical_info": "Vi träffas Torsdagen 9 Juni på Lerjedalens Golfklubb och tillbringar ca 2 timmar ihop.",
       "price": "650 kr",
       "imagePath": "/assets/magnificent_7_cocktails.jpeg",
-      "active": true
+      "active": false
     }
   ]
 }
