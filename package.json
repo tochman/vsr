@@ -23,7 +23,7 @@
     "start": "react-app-rewired start",
     "start:silent": "BROWSER=none react-scripts start",
     "build": "CI= react-app-rewired build && echo '/* /index.html 200' | cat",
-    "cy:open": "cypress open",
+    "cy:open": "cypress open --e2e --browser chrome",
     "cy:run": "cypress run",
     "cypress": "NODE_ENV=test start-server-and-test start:silent http://localhost:3000/ cy:open",
     "cypress:ci": "NODE_ENV=test start-server-and-test start:silent http://localhost:3000/ cy:run"
@@ -49,7 +49,7 @@
   "devDependencies": {
     "babel-plugin-react-remove-properties": "^0.3.0",
     "customize-cra": "^1.0.0",
-    "cypress": "^9.4.1",
+    "cypress": "^10.1.0",
     "react-app-rewired": "^2.1.11",
     "start-server-and-test": "^1.14.0"
   }
