@@ -12,9 +12,9 @@ import SendIcon from "@mui/icons-material/Send";
 
 Array.prototype.toSentence = function (comma, and) {
   const b = this.pop();
-  return (b ? (this.length ? [this.join(`${comma} ` || ", "), b] : [b]) : this).join(
-    ` ${and} ` || " and "
-  );
+  return (
+    b ? (this.length ? [this.join(`${comma} ` || ", "), b] : [b]) : this
+  ).join(` ${and} ` || " and ");
 };
 
 const InterestForm = ({ agenda, strip = false }) => {
@@ -53,7 +53,12 @@ const InterestForm = ({ agenda, strip = false }) => {
       // production code
       const { data } = await axios.post(
         `https://hooks.slack.com/services/${process.env.REACT_APP_SLACK_TOKEN}`,
-        payload
+        {
+          data: payload,
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded",
+          },
+        }
       );
       data === "ok" && setSent(true);
     }
