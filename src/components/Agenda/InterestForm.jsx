@@ -53,8 +53,9 @@ const InterestForm = ({ agenda, strip = false }) => {
       // production code
       const { data } = await axios.post(
         `https://hooks.slack.com/services/${process.env.REACT_APP_SLACK_TOKEN}`,
+
+        payload,
         {
-          data: payload,
           headers: {
             "Content-Type": "application/x-www-form-urlencoded",
           },
