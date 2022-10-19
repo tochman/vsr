@@ -41,9 +41,17 @@ const InterestForm = ({ agenda, strip = false }) => {
     } to get in touch.`;
     const payload = {
       icon_emoji: ":pencil2:",
-      message: contact.message,
       username: contact.name,
       text: text,
+      blocks: [
+        {
+          type: "section",
+          text: {
+            type: "mrkdwn",
+            text: `### Message\n\n${contact.message}`
+          }
+        }
+      ]
     };
 
     if (!process.env.NODE_ENV || process.env.NODE_ENV === "development") {
