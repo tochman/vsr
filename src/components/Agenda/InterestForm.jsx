@@ -42,13 +42,12 @@ const InterestForm = ({ agenda, strip = false }) => {
     const payload = {
       icon_emoji: ":pencil2:",
       username: contact.name,
-      text: text,
       blocks: [
         {
           type: "section",
           text: {
             type: "mrkdwn",
-            text: `### Message\n\n${contact.message}`
+            text: `${text}\n\nMessage${contact.message}`
           }
         }
       ]
