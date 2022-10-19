@@ -47,7 +47,7 @@ const InterestForm = ({ agenda, strip = false }) => {
           type: "section",
           text: {
             type: "mrkdwn",
-            text: `${text}\n\nMessage${contact.message}`
+            text: `${text}\n\nMessage: ${contact.message}`
           }
         }
       ]
