@@ -13,30 +13,46 @@ const Mission = () => {
           Föreningen För Utveckling och Förädling
         </Typography>
         <Typography variant="body1" gutterBottom>
-          Det finns så mycket att upptäcka och lära sig. Det är ett faktum som
-          kan kännas lite överväldigande. Ingen av oss kan någonsin inhämta all
-          världens kunskap och kunna “allt”. Det är helt enkelt omöjligt. Men vi
-          kan alla lite då och då, när det känns rätt, expandera våra vyer och
-          vidga våra horisonter.{" "}
+          Vitterhet är ett historiskt begrepp som främst användes under 1700-
+          och 1800-talen för att beskriva humanistisk bildning, poesi,
+          skönlitterär prosa och retorik. Det betonade vikten av kreativt och
+          kritiskt tänkande samt estetisk känslighet och förmågan att uttrycka
+          sig väl, både i tal och skrift. Även om begreppet vitterhet inte
+          längre är lika vanligt, har Vitterhetssällskapet Ressemblance valt att
+          använda det i sitt namn för att återkoppla till det kulturella och
+          intellektuella arvet från tidigare tider.{" "}
         </Typography>
 
         <Typography variant="body1" gutterBottom>
-          Att samlas i grupp under avslappnade former för att prata om
-          intressanta ämnen, är ett trevligt och roligt sätt att lära. Det är
-          det vi hoppas kunna erbjuda genom VSR och våra olika typer av
-          aktiviteter. Vi vill erbjuda våra medlemmar en blandning av
-          aktiviteter, workshops, och träffar i syfte att öka kunskapen inom
-          många olika områden.{" "}
+          I en värld full av kunskap och upptäckter kan det kännas
+          överväldigande att försöka ta in allt. Ingen av oss kan någonsin
+          inhämta all världens kunskap och kunna "allt". Men vi kan alla, när
+          det känns rätt, expandera våra vyer och vidga våra horisonter. Det är
+          just detta som Vitterhetssällskapet Ressemblance strävar efter att
+          erbjuda sina medlemmar.{" "}
         </Typography>
         <Typography variant="body1" gutterBottom>
-          Det kan handla om litteratur, musik, film, etc. Men det kan även
-          handla om så jordnära ämnen som modern dryckeskultur eller matlagning.{" "}
+          VSR:s mål är att skapa en plattform där människor kan samlas i
+          avslappnade former för att prata om intressanta ämnen och lära sig av
+          varandra. Genom att erbjuda en blandning av aktiviteter, workshops och
+          träffar hoppas föreningen öka kunskapen inom många olika områden,
+          såsom litteratur, musik, film, men även mer jordnära ämnen som modern
+          dryckeskultur eller matlagning.{" "}
         </Typography>
         <Typography variant="body1" gutterBottom>
-          Vi tror att det finns många ämnen man kan "nörda" in i och växa som
-          person.{" "}
+          Vitterhetssällskapet Ressemblance är medvetet om att vår dagsfärsk
+          kunskap ofta bygger på gamla tiders idéer som förädlats och
+          moderniserats. Genom att uppskatta och utforska vitterhetens rika
+          historia kan medlemmarna i VSR vidga sina perspektiv och förstå
+          världen på ett mer nyanserat och berikande sätt.
         </Typography>
-
+        <Typography variant="body1" gutterBottom>
+          VSR tror att det finns många ämnen att "nörda" in sig i och att genom
+          att utforska dessa kan man växa som person. Genom att ansluta sig till
+          Vitterhetssällskapet Ressemblance får medlemmarna möjlighet att
+          fördjupa sig i sina intressen och upptäcka nya passioner, vilket i sin
+          tur bidrar till personlig utveckling och berikande av deras liv.
+        </Typography>
         <Typography variant="body1" style={{ fontWeight: "bold" }} gutterBottom>
           Om du har några idéer, är du välkommen att höra av dig.{" "}
         </Typography>

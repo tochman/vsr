@@ -25,7 +25,7 @@
     "build": "CI= react-app-rewired build && echo '/* /index.html 200' | cat",
     "cy:open": "cypress open --e2e --browser chrome",
     "cy:run": "cypress run",
-    "cypress": "NODE_ENV=test start-server-and-test start:silent http://localhost:3000/ cy:open",
+    "cypress": "NODE_ENV=test start-server-and-test start:silent http://127.0.0.1:3000/ cy:open",
     "cypress:ci": "NODE_ENV=test start-server-and-test start:silent http://localhost:3000/ cy:run"
   },
   "eslintConfig": {

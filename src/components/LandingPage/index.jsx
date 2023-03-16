@@ -9,6 +9,14 @@ const LandingPage = () => {
         <Typography variant="h1" component="h1" gutterBottom>
           Föreningen För Utveckling och Förädling
         </Typography>
+
+        <Typography variant="body1" gutterBottom>
+          <strong>Vitterhetssällskapet Ressemblance (VSR)</strong> är en
+          förening som syftar till att främja personlig utveckling och förädling
+          genom att utforska och dela kunskap om en mängd olika ämnen. Genom att
+          fokusera på det som förenar oss och vår gemensamma nyfikenhet skapar
+          VSR en inbjudande och givande atmosfär för sina medlemmar.
+        </Typography>
         <Typography variant="h3" component="h1" gutterBottom>
           Vitterhet...
         </Typography>

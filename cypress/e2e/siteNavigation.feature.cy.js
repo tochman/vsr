@@ -15,4 +15,12 @@ describe('Application', () => {
       })
     });
   });
+
+describe('Navigate to Mission', () => {
+  it.only('is expected to display the mission view', () => {
+    cy.contains('Mission').click()
+    cy.url().should('include', '/mission')
+  });
+});
+
  })
